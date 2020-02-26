@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div>
+    <h1><a href="/">Django Blog</a></h1>
+</div>
+    <a href="/blogs">ADD NEW BLOG</a></button>
+
+{% for Blog in jha %}
+    <div>
+
+        <p>published: {{ Blog.created_on }}</p>
+        <h2><a href="">{{ Blog.title }}</a></h2>
+        <p>{{ Blog.content|linebreaksbr }}</p><button><a href="/blogpage">make changes</a></button>
+    </div>
+{% endfor %}
+</body>
+</html>
